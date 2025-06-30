@@ -1,0 +1,61 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hematovision - Blood Cell Classifier</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f9fafb;
+        }
+        .container {
+            max-width: 700px;
+            margin-top: 80px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        .header {
+            background-color: #f44336;
+            color: white;
+            padding: 10px;
+            border-radius: 10px 10px 0 0;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .btn-custom {
+            background-color: #f44336;
+            color: white;
+            padding: 8px 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Welcome to the HematoVision</div>
+        
+        <br>
+        <h4><b>About Blood Cells</b></h4>
+        <p>
+            Blood cells are vital components of our body, playing essential roles in immunity, oxygen transport, and clotting.
+            Understanding different types of blood cells is crucial for diagnosing various medical conditions.
+        </p>
+
+        <hr>
+        <h5 class="text-danger"><b>Predict Blood Cell Type</b></h5>
+        <p>Upload an image of a blood cell to determine its type using our state-of-the-art classification model.</p>
+
+        <form action="/" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <input type="file" name="file" accept="image/*" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-custom">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
